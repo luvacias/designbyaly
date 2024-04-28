@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title>  My Website </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+    <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+        }
+        .image-container img {
+          border-radius: 50%;
+      }
+    </style>
+</head>
+
+
+<body style="background-color: #fff;">
+
+    <div class="row">
+
+        <div class="image-container">
+            <img id="earth" src="images/earth.png" height="200" width="200"
+            onmouseover= "this.src='images/earth2.png';"
+            onmouseout= "this.src='images/earth.png';"
+            />
+        </div>
+
+        <div class="image-container">
+            <img id="cloud" src="images/cloud.png" height="200" width="200"
+            onmouseover= "this.src='images/cloud2.png';"
+            onmouseout= "this.src='images/cloud.png';"
+            />
+        </div>
+
+        <div class="image-container">
+            <img id="season" src="images/season.png" height="200" width="200"
+            onmouseover= "this.src='images/season2.png';"
+            onmouseout= "this.src='images/season.png';"
+            />
+        </div>
+
+        <div class="row">
+
+            <div class="image-container">
+                <img id="mars" src="images/mars.png" height="200" width="200" 
+                onmouseover= "this.src='images/mars2.png';"
+                onmouseout= "this.src='images/mars.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="alien" src="images/alien.png" height="200" width="200"
+                onmouseover= "this.src='images/alien2.png';"
+                onmouseout= "this.src='images/alien.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="thunder" src="images/thunder.png" height="200" width="200"
+                onmouseover= "this.src='images/thunder2.png';"
+                onmouseout= "this.src='images/thunder.png';"
+                />
+            </div>
+
+            <div class="row">
+
+                <div class="image-container">
+                    <img id="animal" src="images/animal.png" height="200" width="200"
+                    onmouseover= "this.src='images/animal2.png';"
+                    onmouseout= "this.src='images/animal.png';"
+                    />
+                </div>  
+
+                <div class="image-container">
+                    <img id="politics" src="images/politics.png" height="200" width="200"
+                    onmouseover= "this.src='images/politics2.png';"
+                    onmouseout= "this.src='images/politics.png';"
+                    />
+                </div>
+
+                <div class="image-container">
+                    <img id="bandage" src="images/bandage.png" height="200" width="200"
+                    onmouseover= "this.src='images/bandage2.png';"
+                    onmouseout= "this.src='images/bandage.png';"
+                    />
+                </div>
+
+            </div>
+
+            <script>
+            var piano = new buzz.sound("audio/1.mp3");
+            var rainycloud = new buzz.sound("audio/2.m4a");
+            var birds = new buzz.sound("audio/3.mp3");
+            var lazer = new buzz.sound("audio/4.mp3");
+            var theremin = new buzz.sound("audio/5.mp3");
+            var dog = new buzz.sound("audio/6.mp3");
+            var idea = new buzz.sound("audio/7.mp3");
+            var rumble = new buzz.sound("audio/8.mp3");
+            var ambulance = new buzz.sound("audio/9.mp3");
+
+            function playSound(sound, duration) {
+                sound.play();
+                setTimeout(function() {
+                    sound.stop();
+                }, duration);
+            }
+
+            window.onload = function() {
+                document.getElementById('earth').addEventListener('mouseover', function () {
+                    this.src = 'images/earth2.png';
+                    playSound(piano, 5000); // 5 seconds
+                });  
+
+                document.getElementById('cloud').addEventListener('mouseover', function () {
+                    this.src = 'images/cloud2.png';
+                    playSound(rainycloud, 5000); // 5 seconds
+                });  
+
+                document.getElementById('season').addEventListener('mouseover', function () {
+                    this.src = 'images/season2.png';
+                    playSound(birds, 5000); // 5 seconds
+                });  
+
+                document.getElementById('mars').addEventListener('mouseover', function () {
+                    this.src = 'images/mars2.png';
+                    playSound(lazer, 5000); // 5 seconds
+                });  
+
+                document.getElementById('alien').addEventListener('mouseover', function () {
+                    this.src = 'images/alien2.png';
+                    playSound(theremin, 5000); // 5 seconds
+                });  
+
+                document.getElementById('animal').addEventListener('mouseover', function () {
+                    this.src = 'images/animal2.png';
+                    playSound(dog, 5000); // 5 seconds
+                });  
+
+                document.getElementById('politics').addEventListener('mouseover', function () {
+                    this.src = 'images/politics2.png';
+                    playSound(idea, 5000); // 5 seconds
+                });  
+
+                document.getElementById('thunder').addEventListener('mouseover', function () {
+                    this.src = 'images/thunder2.png';
+                    playSound(rumble, 5000); // 5 seconds
+                });  
+
+                document.getElementById('bandage').addEventListener('mouseover', function () {
+                    this.src = 'images/bandage2.png';
+                    playSound(ambulance, 5000); // 5 seconds
+                });  
+            }  
+        </script>
+
+
+        </body>
+        </html>
